@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Link from 'gatsby-link'
-import PostListing from '../components/post-listing'
+import React, { Component } from 'react';
+import Link from 'gatsby-link';
+import PostListing from '../components/post-listing';
 
 const IndexPage = ({ data }) => {
-  return <PostListing posts={data} />
-}
+  return <PostListing posts={data} />;
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query IndexQuery {
@@ -31,4 +31,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

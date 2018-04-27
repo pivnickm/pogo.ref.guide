@@ -1,43 +1,43 @@
-import React from 'react'
-import { Card, CardText, CardTitle } from 'react-md'
-import PostCover from '../components/post-cover'
-import PostInfo from '../components/post-info'
-import './post.scss'
+import React from 'react';
+import { Card, CardText, CardTitle } from 'react-md';
+import PostCover from '../components/post-cover';
+import PostInfo from '../components/post-info';
+import './post.scss';
 
 class PostTemplate extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       mobile: true,
-    }
-    this.handleResize = this.handleResize.bind(this)
+    };
+    this.handleResize = this.handleResize.bind(this);
   }
   componentDidMount() {
-    this.handleResize()
-    window.addEventListener('resize', this.handleResize)
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize)
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize() {
     if (window.innerWidth >= 640) {
-      this.setState({ mobile: false })
+      this.setState({ mobile: false });
     } else {
-      this.setState({ mobile: true })
+      this.setState({ mobile: true });
     }
   }
 
   render() {
-    const { mobile } = this.state
-    const { slug } = this.props.pathContext
-    const expanded = !mobile
-    const postOverlapClass = mobile ? 'post-overlap-mobile' : 'post-overlap'
-    const postNode = this.props.data.markdownRemark
-    const post = postNode.frontmatter
+    const { mobile } = this.state;
+    const { slug } = this.props.pathContext;
+    const expanded = !mobile;
+    const postOverlapClass = mobile ? 'post-overlap-mobile' : 'post-overlap';
+    const postNode = this.props.data.markdownRemark;
+    const post = postNode.frontmatter;
     if (!post.id) {
-      post.id = slug
+      post.id = slug;
     }
     return (
       <div className="post-page md-grid md-grid--no-spacing">
@@ -54,10 +54,10 @@ class PostTemplate extends React.Component {
           </Card>
         </div>
       </div>
-    )
+    );
   }
 }
-export default PostTemplate
+export default PostTemplate;
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -73,4 +73,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
