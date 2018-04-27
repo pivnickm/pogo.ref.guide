@@ -8,20 +8,18 @@ import {
   CardTitle,
   FontIcon,
   Media,
-  MediaOverlay
-} from 'react-md';
+  MediaOverlay,
+} from 'react-md'
 
 const PostCard = ({ cardContent, coverHeight, mobile }) => {
   const { frontmatter, fields } = cardContent
   return (
-    <Card
-      className="md-grid md-cell md-cell--12"
-    >
-      <Link style={{ textDecoration: "none" }} to={fields.slug}>
+    <Card className="md-grid md-cell md-cell--12">
+      <Link style={{ textDecoration: 'none' }} to={fields.slug}>
         <Media
           style={{
             backgroundImage: `url(${frontmatter.cover})`,
-            height: `${coverHeight}px`
+            height: `${coverHeight}px`,
           }}
           className="post-preview-cover"
         >
@@ -40,11 +38,9 @@ const PostCard = ({ cardContent, coverHeight, mobile }) => {
         title={`Published on ${frontmatter.date}`}
         subtitle={`${cardContent.timeToRead} min read`}
       />
-      <CardText expandable={mobile}>
-        {frontmatter.description}
-      </CardText>
+      <CardText expandable={mobile}>{frontmatter.description}</CardText>
     </Card>
   )
-};
+}
 
 export default PostCard
