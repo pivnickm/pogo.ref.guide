@@ -1,15 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import {
+  Avatar,
   Button,
   Card,
   CardText,
   CardTitle,
+  FontIcon,
   Media,
   MediaOverlay
 } from 'react-md';
 
-const PostCard = ({ cardContent, coverHeight }) => {
+const PostCard = ({ cardContent, coverHeight, mobile }) => {
   const { frontmatter, fields } = cardContent
   return (
     <Card
@@ -32,7 +34,13 @@ const PostCard = ({ cardContent, coverHeight }) => {
           </MediaOverlay>
         </Media>
       </Link>
-      <CardText>
+      <CardTitle
+        expander={mobile}
+        avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+        title={`Published on ${frontmatter.date}`}
+        subtitle={`${cardContent.timeToRead} min read`}
+      />
+      <CardText expandable={mobile}>
         {frontmatter.description}
       </CardText>
     </Card>

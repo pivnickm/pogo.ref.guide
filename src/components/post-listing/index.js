@@ -38,6 +38,7 @@ class PostListing extends Component {
             key={node.frontmatter.title}
             cardContent={node}
             coverHeight={coverHeight}
+            mobile={mobile}
           />
         ))}
       </div>
