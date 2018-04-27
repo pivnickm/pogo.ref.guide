@@ -1,7 +1,7 @@
 ---
 title: "Mythical Discovery"
 date: "2018-04-25"
-cover: "/images/mewEvent.jpg"
+cover: "/images/mewEvent.webp"
 coverHeight: "275"
 description: "Everything you need to know about catching Mew"
 ---

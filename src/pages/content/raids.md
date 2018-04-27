@@ -1,7 +1,7 @@
 ---
 title: "Raid Bosses"
 date: "2018-04-25"
-cover: "/images/raidBoss.jpg"
+cover: "/images/raidBoss.webp"
 coverHeight: "275"
 description: "Currently active raid bosses"
 ---

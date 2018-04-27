@@ -1,7 +1,7 @@
 ---
 title: "2 Spoopy 4 Me"
 date: "2018-04-24"
-cover: "/images/ghosts.jpg"
+cover: "/images/ghosts.webp"
 coverHeight: "275"
 description: "All Available Ghost Types Pokemon"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Ditto Factor"
 date: "2018-04-24"
-cover: "/images/ditto.jpg"
+cover: "/images/dittoEvent.webp"
 coverHeight: "275"
 description: "All About Dittos"
 ---
